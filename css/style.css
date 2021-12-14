@@ -1,0 +1,132 @@
+/*
+    style.ccs
+    Programado para diseñar el mockup del index.html
+    @author Juan Manuel Toscano Reyes <jtoscanoreyes.guadalupe@alumnado.fundacionloyola.net>
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    font-size: 15px;
+	background-image: url(../img/fondo.jpg);
+}
+header{
+    background-color: #2f3237;
+    overflow: hidden;
+    box-shadow: 0px 3px 7px black;
+    /*width: 1200px;*/
+    width: 100%;
+    height: auto;
+    position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+header img{
+    /*margin: 10px;*/
+    margin: 0.8333333333333333%;
+}
+header nav{
+    /*margin-right: 10px;*/
+    margin-right: 0.8333333333333333%;
+    text-align: center;
+    float: right;
+}
+header nav ul{
+	list-style-type: none;
+}
+header nav li{
+	float: left;
+    line-height: 5.33rem;
+}
+header nav a{
+	display: block;
+	font-weight: bold;
+	padding: 0px 0.9rem;
+	text-decoration: none;
+	color: white;
+	transition: all 500ms ease;
+}
+header nav a:hover{
+	background-color: #636669;
+}
+h1{
+	text-align: center;
+}
+main{
+	margin-top: 88px;
+	min-height: 100vh;
+	min-height: calc(100vh - 154px) !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+input[type=text]{
+	width: 100%;
+	margin: 2% auto;
+	box-sizing: border-box;
+}
+form{
+	width: 20%;
+}
+footer{
+	clear: left;
+	background-color: #2f3237;
+	color: white;
+	box-shadow: 0px -3px 7px black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#footerWrapper{
+	overflow: hidden;
+}
+#footerMenu{
+	float: left;
+	padding: 1%;
+}
+#contactar{
+	float: left;
+	padding: 1%;
+}
+footer ul{
+	list-style-type: none;
+}
+footer li{
+	margin-bottom: 0.3rem;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+}
+i{
+	margin: 3%;
+}
+#social{
+	float: right;
+	margin: 1%;
+}
+#footerdown{
+	background-color: #181818;
+	line-height: 2rem;
+}
+#privacidad{
+	display: inline;
+	margin-left: 1%;
+}
+#privacidad a{
+	text-decoration: underline;
+}
+#licencia{
+	float: right;
+	display: inline;
+	margin-right: 1%;
+}
+#evg{
+	font-weight: bold;
+	text-decoration: none;
+}
