@@ -1,9 +1,8 @@
 <?php
-    session_start();
     //Juan Manuel Toscano Reyes
     require 'operaciones_bd.php';
     $operaciones=new Operaciones();
-    $operaciones->inicio_sesion();
+    $operaciones->preferencias();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,11 +27,20 @@
             </nav>
         </header>
         <main>
-            <h1>INICIO SESION</h1>
-            <form action="#" method="post">
-                <input type="text" name="nombreUsuario" placeholder="Username" /><br>
-                <input type="text" name="contrasena" placeholder="Password" /><br>
-                <input type="submit" name="enviar" />
+            <h1>PREFERENCIAS</h1>
+            <form action="#" method="POST">
+                <?php
+                    $consulta="SELECT idMinijuego,nombreMinijuego FROM minijuegos";
+                    $resultado=$operaciones->consultar($consulta);
+                    $fila=$resultado->fetch_array(MYSQLI_ASSOC);
+                    foreach($datos as $fila){
+                        echo '<div>';
+                        echo '<input id="'.$fila['idMinijuego'].'" type="checkbox" name="minijuegos[]" value="'.$fila['idMinijuego'].'" />';
+                        echo '<label for="'.$fila['idMinijuego'].'"> '.$fila['nombre'].'</label>';
+                        echo '</div>';
+                    }
+                ?>
+                <input type="submit" name="enviar" value="Enviar" />
             </form>
         </main>
         <footer>

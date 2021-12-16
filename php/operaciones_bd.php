@@ -19,14 +19,25 @@
                             VALUES ('".$_POST['nombreUsuario']."','".$_POST['contrasena']."','".$_POST['nombre']."','".$_POST['apellidos']."','".$_POST['correo']."');";
                 echo $consulta;
                 $resultado=$this->consultar($consulta);
-                header('Location:inicio_sesion.php');
+                header('Location:preferencias.php');
             }
         }
         function inicio_sesion(){
             if(isset($_POST['enviar'])){
                 $consulta="SELECT * FROM `usuario` WHERE nombreUsuario='".$_POST['nombreUsuario']."' AND contraseña='".$_POST['contrasena']."';";
                 $resultado=$this->consultar($consulta);
+                $fila=$resultado->fetch_array(MYSQLI_ASSOC);
+                if($fila){
+                    $_SESSION['id']=$fila['idUsuario'];
+                    $_SESSION['nombreUsuario']=$fila['nombreUsuario'];
+                    header('Location:indexi.php');
+                }else{
+                    echo 'No se ha iniciado sesión correctamente';
+                }
             }
+        }
+        function preferencias(){
+            
         }
     }
 ?>
