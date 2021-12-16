@@ -2,7 +2,7 @@
     //Juan Manuel Toscano Reyes
     require 'operaciones_bd.php';
     $operaciones=new Operaciones();
-    $operaciones->registrar();
+    $operaciones->inicio_sesion();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,11 +27,8 @@
             </nav>
         </header>
         <main>
-            <h1>REGISTRO</h1>
-            <form action="#" method="POST">
-                <input type="text" name="nombre" placeholder="Nombre" /><br>
-                <input type="text" name="apellidos" placeholder="Apellidos" /><br>
-                <input type="text" name="correo" placeholder="Correo" /><br>
+            <h1>INICIO SESION</h1>
+            <form action="form" method="post">
                 <input type="text" name="nombreUsuario" placeholder="Username" /><br>
                 <input type="text" name="contrasena" placeholder="Password" /><br>
                 <input type="submit" name="enviar" />

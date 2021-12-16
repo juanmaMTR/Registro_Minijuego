@@ -9,8 +9,7 @@ CREATE TABLE Usuario(
     contraseña varchar(50) NOT NULL,
     nombre varchar(40) NOT NULL,
     apellidos varchar(40) NOT NULL,
-    correo varchar(150) NOT NULL,
-    tipo char(1)
+    correo varchar(150) NOT NULL
 );
 --Creamos la tabla Minijuegos
 CREATE TABLE Minijuegos(

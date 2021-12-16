@@ -7,8 +7,26 @@
         function cerrarconexion(){
             return $this->conexion->close();//Cierro la conexion con la base de datos
         }
-        function consultar(){
+        function consultar($consulta){
             return $this->conexion->query($consulta); //Realizo la consulta con la base de datos
+        }
+        function error(){
+            return $this->conexion->errno;
+        }
+        function registrar(){
+            if(isset($_POST['enviar'])){
+                $consulta=  "INSERT INTO `usuario`(`nombreUsuario`, `contraseña`, `nombre`, `apellidos`, `correo`) 
+                            VALUES ('".$_POST['nombreUsuario']."','".$_POST['contrasena']."','".$_POST['nombre']."','".$_POST['apellidos']."','".$_POST['correo']."');";
+                echo $consulta;
+                $resultado=$this->consultar($consulta);
+                header('Location:inicio_sesion.php');
+            }
+        }
+        function inicio_sesion(){
+            if(isset($_POST['enviar'])){
+                $consulta="SELECT * FROM `usuario` WHERE nombreUsuario='".$_POST['nombreUsuario']."' AND contraseña='".$_POST['contrasena']."';";
+                $resultado=$this->consultar($consulta);
+            }
         }
     }
 ?>

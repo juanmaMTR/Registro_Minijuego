@@ -69,6 +69,18 @@ input[type=text]{
 	width: 100%;
 	margin: 2% auto;
 	box-sizing: border-box;
+	border: 2px rgb(116, 171, 223) solid;
+}
+input[type=submit]{
+	margin: auto;
+	width: 30%;
+	border: 3px skyblue solid;
+	background-color: #1C6E8C;
+}
+input[type=submit]:hover{
+	background-color: #2787aa;
+	color: white;
+	transition: all 2s ease;
 }
 form{
 	width: 20%;
