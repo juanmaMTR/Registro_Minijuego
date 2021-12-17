@@ -33,7 +33,7 @@
                 <input type="text" name="apellidos" placeholder="Apellidos" /><br>
                 <input type="text" name="correo" placeholder="Correo" /><br>
                 <input type="text" name="nombreUsuario" placeholder="Username" /><br>
-                <input type="text" name="contrasena" placeholder="Password" /><br>
+                <input type="password" name="contrasena" placeholder="Password" /><br>
                 <input type="submit" name="enviar" />
             </form>
         </main>

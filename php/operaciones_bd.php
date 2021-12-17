@@ -19,7 +19,10 @@
                             VALUES ('".$_POST['nombreUsuario']."','".$_POST['contrasena']."','".$_POST['nombre']."','".$_POST['apellidos']."','".$_POST['correo']."');";
                 echo $consulta;
                 $resultado=$this->consultar($consulta);
-                header('Location:preferencias.php');
+                $consulta="SELECT idUsuario FROM usuario WHERE nombreUsuario='".$_POST['nombreUsuario']."';";
+                $resultado=$this->consultar($consulta);
+                $fila=$resultado->fetch_array(MYSQLI_ASSOC);
+                header('Location:preferencias.php?idUsuario='.$fila['idUsuario']);
             }
         }
         function inicio_sesion(){
@@ -37,7 +40,13 @@
             }
         }
         function preferencias(){
-            
+            if(isset($_POST['enviar'])){
+                foreach ($_POST['minijuegos'] as $minijuego ) {
+                    $consulta="INSERT INTO preferencias (idUsuario, idMinijuego) VALUES ('".$_GET['idUsuario']."','".$minijuego."');";
+                    $resultado=$this->consultar($consulta);
+                }
+                header('Location:inicio_sesion.php');
+            }
         }
     }
 ?>

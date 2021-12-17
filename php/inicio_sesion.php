@@ -31,7 +31,7 @@
             <h1>INICIO SESION</h1>
             <form action="#" method="post">
                 <input type="text" name="nombreUsuario" placeholder="Username" /><br>
-                <input type="text" name="contrasena" placeholder="Password" /><br>
+                <input type="password" name="contrasena" placeholder="Password" /><br>
                 <input type="submit" name="enviar" />
             </form>
         </main>

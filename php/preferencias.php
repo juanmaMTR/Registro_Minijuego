@@ -32,11 +32,10 @@
                 <?php
                     $consulta="SELECT idMinijuego,nombreMinijuego FROM minijuegos";
                     $resultado=$operaciones->consultar($consulta);
-                    $fila=$resultado->fetch_array(MYSQLI_ASSOC);
-                    foreach($datos as $fila){
+                    while($fila=$resultado->fetch_assoc()){
                         echo '<div>';
                         echo '<input id="'.$fila['idMinijuego'].'" type="checkbox" name="minijuegos[]" value="'.$fila['idMinijuego'].'" />';
-                        echo '<label for="'.$fila['idMinijuego'].'"> '.$fila['nombre'].'</label>';
+                        echo '<label for="'.$fila['idMinijuego'].'"> '.$fila['nombreMinijuego'].'</label>';
                         echo '</div>';
                     }
                 ?>

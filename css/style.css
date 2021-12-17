@@ -71,6 +71,12 @@ input[type=text]{
 	box-sizing: border-box;
 	border: 2px rgb(116, 171, 223) solid;
 }
+input[type=password]{
+	width: 100%;
+	margin: 2% auto;
+	box-sizing: border-box;
+	border: 2px rgb(116, 171, 223) solid;
+}
 input[type=submit]{
 	margin: auto;
 	width: 30%;
