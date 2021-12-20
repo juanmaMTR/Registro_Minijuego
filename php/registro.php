@@ -34,7 +34,7 @@
                 <input type="text" name="correo" placeholder="Correo" /><br>
                 <input type="text" name="nombreUsuario" placeholder="Username" /><br>
                 <input type="password" name="contrasena" placeholder="Password" /><br>
-                <input type="submit" name="enviar" />
+                <input type="submit" name="enviar" value="Enviar"/>
             </form>
         </main>
         <footer>
