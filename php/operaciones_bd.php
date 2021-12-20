@@ -48,5 +48,12 @@
                 header('Location:inicio_sesion.php');
             }
         }
+        function cerrarSesion(){
+            unset($_SESSION['id']);
+            unset($_SESSION['nombreUsuario']);
+            session_destroy();
+            //header('Location:../index.html');
+            header("Refresh:1; url=../index.html");
+        }
     }
 ?>
